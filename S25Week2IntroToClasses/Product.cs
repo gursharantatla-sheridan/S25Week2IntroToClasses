@@ -27,5 +27,12 @@ namespace S25Week2IntroToClasses
             _name = name;
             _price = price;
         }
+
+        // properties
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
     }
 }
