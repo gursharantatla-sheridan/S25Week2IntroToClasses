@@ -13,6 +13,9 @@ namespace S25Week2IntroToClasses
         private string _name;
         private double _price;
 
+        // auto-implemented property
+        public int Quantity { get; set; }
+
         // constructors
         public Product()
         {
@@ -31,8 +34,19 @@ namespace S25Week2IntroToClasses
         // properties
         public int Id
         {
-            get { return id; }
-            set { id = value; }
+            //get { return id; }
+            get => id;
+            set 
+            {
+                if (value >= 0)
+                    id = value; 
+            }
+        }
+
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; }
         }
     }
 }
